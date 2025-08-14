@@ -14,6 +14,7 @@ body {
   line-height: 1.6;
 }
 
+
 .app {
   min-height: 100vh;
 }
@@ -328,6 +329,20 @@ body {
   background: #c82333;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .appHeader h1 {
+    font-size: 2.2rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 768px) {
   .appHeader h1 {
     font-size: 2rem;
@@ -369,5 +384,37 @@ body {
   .navLink {
     padding: 0.5rem;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appHeader h1 {
+    font-size: 1.8rem;
+  }
+
+  .appHeader p {
+    font-size: 1rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.4rem;
+  }
+
+  .feedbackFormSection,
+  .feedbackListSection {
+    padding: 1rem;
+  }
+
+  .submitButton {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .feedbackItem {
+    padding: 1rem;
+  }
+
+  .feedbackAuthor h4 {
+    font-size: 1rem;
   }
 }

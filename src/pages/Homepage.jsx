@@ -9,7 +9,7 @@ const Homepage = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [selectedRating, setSelectedRating] = useState("all");
-    const [currentView, setCurrentView] = useState("list"); // 'list' or 'form'
+    const [currentView, setCurrentView] = useState("list");
     const [formData, setFormData] = useState({
         name: "",
         rating: 5,

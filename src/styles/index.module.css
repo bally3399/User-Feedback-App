@@ -92,7 +92,6 @@ body {
   opacity: 0.9;
 }
 
-/* Main Content */
 .appMain {
   padding: 2rem 0;
 }
@@ -103,7 +102,6 @@ body {
   padding: 0 1rem;
 }
 
-/* Section Styles */
 .feedbackFormSection,
 .feedbackListSection {
   background: white;
@@ -128,7 +126,6 @@ body {
   font-weight: 600;
 }
 
-/* Feedback Form Styles */
 .feedbackForm {
   max-width: 600px;
 }
@@ -190,7 +187,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Filter Bar Styles */
 .filterBar {
   display: flex;
   align-items: center;
@@ -210,7 +206,6 @@ body {
   background: white;
 }
 
-/* Feedback List Styles */
 .feedbackList {
   display: flex;
   flex-direction: column;
@@ -279,7 +274,6 @@ body {
   line-height: 1.6;
 }
 
-/* Loading and Error States */
 .loadingContainer {
   text-align: center;
   padding: 3rem;
@@ -334,7 +328,6 @@ body {
   background: #c82333;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .appHeader h1 {
     font-size: 2rem;

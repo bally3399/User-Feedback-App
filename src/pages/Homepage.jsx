@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FilterBar from "../components/FilterBar";
 import FeedbackList from "../components/FeedbackList";
+import MenuIcon from '@mui/icons-material/Menu';
 import styles from "../styles/index.module.css";
 
 const Homepage = () => {
@@ -120,7 +121,7 @@ const Homepage = () => {
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
-                        ☰
+                        <MenuIcon/>
                     </button>
                     <div className={`${styles.navLinks} ${isMenuOpen ? styles.open : ""}`}>
                         <button

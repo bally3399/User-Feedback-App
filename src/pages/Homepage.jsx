@@ -16,6 +16,7 @@ const Homepage = () => {
         comment: "",
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const API_BASE_URL = "http://localhost:3000";
 
@@ -114,16 +115,29 @@ const Homepage = () => {
                     <a href="/" className={styles.navBrand}>
                         Feedback App
                     </a>
-                    <div className={styles.navLinks}>
+                    <button
+                        className={styles.hamburger}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        ☰
+                    </button>
+                    <div className={`${styles.navLinks} ${isMenuOpen ? styles.open : ""}`}>
                         <button
                             className={`${styles.navLink} ${currentView === "list" ? styles.active : ""}`}
-                            onClick={() => setCurrentView("list")}
+                            onClick={() => {
+                                setCurrentView("list");
+                                setIsMenuOpen(false);
+                            }}
                         >
                             View Feedback
                         </button>
                         <button
                             className={`${styles.navLink} ${currentView === "form" ? styles.active : ""}`}
-                            onClick={() => setCurrentView("form")}
+                            onClick={() => {
+                                setCurrentView("form");
+                                setIsMenuOpen(false);
+                            }}
                         >
                             Submit Feedback
                         </button>
@@ -134,7 +148,9 @@ const Homepage = () => {
             <header className={styles.appHeader}>
                 <h1>{currentView === "list" ? "User Feedback Dashboard" : "Submit Your Feedback"}</h1>
                 <p>
-                    {currentView === "list" ? "View and filter all user feedback" : "Share your thoughts and help us improve"}
+                    {currentView === "list"
+                        ? "View and filter all user feedback"
+                        : "Share your thoughts and help us improve"}
                 </p>
             </header>
 
